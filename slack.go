@@ -18,7 +18,7 @@ var ( dep *Service.DeployService )
 
 func ReadDeploys() {
 	log.Print("hello world")
-	f, err := os.Open("./src/slackProject/deploys.sqlite")
+	f, err := os.Open("./deploys.sqlite")
 	if err != nil {
 		log.Fatalf("Not able to initialize SQLite DB connectivity \n %v", err)
 	}
