@@ -66,6 +66,7 @@ func GetActionsOfEngineer(w http.ResponseWriter, r *http.Request) {
 	Handler function to return the actions of an engineer from the database
 	*/
 	vars := mux.Vars(r)
+	log.Print(vars)
 	actions, err := dep.GetActionsOfEng(vars["engineer"])
 	status, message := responseFormatter(actions, err)
 	w.WriteHeader(status)
