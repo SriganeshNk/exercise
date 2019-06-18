@@ -18,7 +18,7 @@ func ReadDeploys() {
 	Initializes the deployService to be used by handlers of the API layer
 	 */
 	log.Print("hello world")
-	f, err := os.Open("../deploys.sqlite")
+	f, err := os.Open("deploys.sqlite")
 	if err != nil {
 		log.Fatalf("Not able to initialize SQLite DB connectivity \n %v", err)
 	}
